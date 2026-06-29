@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import {
   Shield,
@@ -45,17 +46,31 @@ export function PromisesSection() {
   return (
     <section id="ueber-uns" className="py-20 md:py-28 bg-muted/50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <Badge variant="outline" className="mb-4">
-            Über uns
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Unser Versprechen an Sie
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Sechs Werte, die unsere Arbeit leiten – und die Sie bei jedem
-            Projekt spüren werden.
-          </p>
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 mb-16">
+          <div className="relative w-full max-w-md lg:max-w-sm shrink-0">
+            <div className="overflow-hidden rounded-2xl border border-border/50 shadow-lg">
+              <Image
+                src="/team.webp"
+                alt="Die Geschäftsführer von H.G. Erdmann Sanitär- und Heizungsbau"
+                width={640}
+                height={427}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+          <div className="text-center lg:text-left">
+            <Badge variant="outline" className="mb-4">
+              Über uns
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              Unser Versprechen an Sie
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Als Familienbetrieb in Hagenburg stehen wir für persönliche
+              Beratung und handwerkliche Qualität. Sechs Werte leiten unsere
+              Arbeit – und die spüren Sie bei jedem Projekt.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
