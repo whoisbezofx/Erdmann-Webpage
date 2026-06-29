@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Phone, Menu, Droplets, Clock } from "lucide-react";
+import { Phone, Menu, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -37,18 +38,15 @@ export function Header() {
       </div>
 
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Droplets className="h-5 w-5" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-bold leading-tight tracking-tight">
-              Erdmann
-            </span>
-            <span className="text-[11px] leading-tight text-muted-foreground">
-              Sanitär & Heizungsbau
-            </span>
-          </div>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.webp"
+            alt="Erdmann Sanitär- und Heizungsbau Wartungsdienst"
+            width={180}
+            height={60}
+            className="h-12 w-auto"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
