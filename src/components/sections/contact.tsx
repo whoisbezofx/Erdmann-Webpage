@@ -110,7 +110,7 @@ export function ContactSection() {
           <Card className="border-border/50 overflow-hidden">
             <div className="h-full min-h-[300px] lg:min-h-full bg-muted relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.5!2d9.3337!3d52.4397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDI2JzIyLjkiTiA5wrAyMCcwMS4zIkU!5e0!3m2!1sde!2sde!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.5!2d9.332!3d52.437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b73ea09f7d66c1%3A0x4248963c4c55470!2sAm+Torfdamm+13%2C+31558+Hagenburg!5e0!3m2!1sde!2sde!4v1"
                 className="absolute inset-0 w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
