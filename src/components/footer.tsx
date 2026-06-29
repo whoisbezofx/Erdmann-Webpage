@@ -75,7 +75,7 @@ export function Footer() {
               </li>
               <li className="flex justify-between pt-1">
                 <span className="text-primary font-medium">Notdienst</span>
-                <span className="text-primary font-medium">24/7</span>
+                <span className="text-primary font-medium">auf Anfrage</span>
               </li>
             </ul>
           </div>

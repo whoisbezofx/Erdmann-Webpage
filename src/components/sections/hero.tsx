@@ -29,7 +29,7 @@ export function HeroSection() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed">
             H.G. Erdmann steht für Qualität, Transparenz und Zuverlässigkeit
             – bei der Badmodernisierung, Heizungswartung oder dem
-            24/7-Notdienst.
+            Notdienst auf Anfrage.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -63,7 +63,7 @@ export function HeroSection() {
             </span>
             <span className="flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
-              24/7 Notdienst
+              Notdienst auf Anfrage
             </span>
           </div>
         </div>
