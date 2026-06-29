@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const GOOGLE_RATING = 4.0;
 const GOOGLE_REVIEW_COUNT = 21;
 const GOOGLE_REVIEWS_URL =
-  "https://www.google.com/maps/place/Erdmann+Sanitär+%26+Heizung+GmbH/@52.4296039,9.3109795,17z/data=!4m6!3m5!1s0x47b07df8fab92add:0x883b4673ddb67c52!8m2!3d52.42917!4d9.31138!16s%2Fg%2F1tggmps6?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D;
+  "https://www.google.com/maps/place/Erdmann+Sanitär+%26+Heizung+GmbH/@52.4296039,9.3109795,17z/data=!4m6!3m5!1s0x47b07df8fab92add:0x883b4673ddb67c52!8m2!3d52.42917!4d9.31138!16s%2Fg%2F1tggmps6?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D";
 
 const reviews = [
   {
