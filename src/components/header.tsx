@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "#leistungen", label: "Leistungen" },
   { href: "#ueber-uns", label: "Über uns" },
+  { href: "#aktuelles", label: "Aktuelles" },
   { href: "#notdienst", label: "Notdienst" },
   { href: "#kontakt", label: "Kontakt" },
 ];

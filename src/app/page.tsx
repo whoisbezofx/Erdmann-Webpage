@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/sections/hero";
 import { ServicesSection } from "@/components/sections/services";
 import { BadplanerSection } from "@/components/sections/badplaner";
 import { PromisesSection } from "@/components/sections/promises";
+import { NewsSection } from "@/components/sections/news";
 import { ReviewsSection } from "@/components/sections/reviews";
 import { EmergencySection } from "@/components/sections/emergency";
 import { ContactSection } from "@/components/sections/contact";
@@ -17,6 +18,7 @@ export default function Home() {
         <ServicesSection />
         <BadplanerSection />
         <PromisesSection />
+        <NewsSection />
         <ReviewsSection />
         <EmergencySection />
         <ContactSection />
