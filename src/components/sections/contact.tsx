@@ -35,7 +35,7 @@ export function ContactSection() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <CardTitle className="text-base">Telefon</CardTitle>
-                <CardDescription>Mo–Do 8–16, Fr 8–12 Uhr</CardDescription>
+                <CardDescription>Mo–Do 8:00-11:30, 13:30-16:00, Fr 8–12 Uhr</CardDescription>
               </CardHeader>
               <CardContent>
                 <a
@@ -96,7 +96,7 @@ export function ContactSection() {
                 <div className="space-y-1 text-sm">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Mo – Do</span>
-                    <span className="font-medium">08:00 – 16:00</span>
+                    <span className="font-medium">08:00 – 11:30, 13:30 - 16:00</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Freitag</span>
