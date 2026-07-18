@@ -92,7 +92,7 @@ export function Footer() {
             <a href="/impressum" className="hover:text-background/80 transition-colors">
               Impressum
             </a>
-            <a href="#" className="hover:text-background/80 transition-colors">
+            <a href="/datenschutz" className="hover:text-background/80 transition-colors">
               Datenschutz
             </a>
           </div>

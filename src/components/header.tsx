@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -10,14 +11,16 @@ import { Phone, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#leistungen", label: "Leistungen" },
-  { href: "#ueber-uns", label: "Über uns" },
-  { href: "#aktuelles", label: "Aktuelles" },
-  { href: "#notdienst", label: "Notdienst" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#leistungen", label: "Leistungen" },
+  { href: "/#ueber-uns", label: "Über uns" },
+  { href: "/#aktuelles", label: "Aktuelles" },
+  { href: "/#notdienst", label: "Notdienst" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -27,11 +30,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const solid = !isHome || scrolled;
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
-        scrolled
+        solid
           ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b"
           : "bg-transparent"
       )}
@@ -55,7 +60,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={scrolled ? "" : "text-white hover:bg-white/20"}
+                  className={solid ? "" : "text-white hover:bg-white/20"}
                 />
               }
             >
@@ -96,7 +101,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 "px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                scrolled
+                solid
                   ? "text-muted-foreground hover:text-foreground hover:bg-muted"
                   : "text-white/90 hover:text-white hover:bg-white/10"
               )}
@@ -107,7 +112,7 @@ export function Header() {
           <a
             href="tel:+4950336063"
             className={
-              scrolled
+              solid
                 ? cn(buttonVariants({ size: "sm" }), "ml-3")
                 : "ml-3 inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md border border-white/40 text-white bg-white/10 hover:bg-white/20 transition-colors"
             }
