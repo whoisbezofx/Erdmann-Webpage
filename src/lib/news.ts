@@ -6,6 +6,7 @@ export interface NewsArticle {
   excerpt: string;
   image: string;
   imageAlt: string;
+  images?: string[];
   content: { heading?: string; paragraphs: string[] }[];
 }
 
@@ -19,6 +20,13 @@ export const newsArticles: NewsArticle[] = [
       "BLACK SELECTION – die schwarz matte Badausstattung von KEUCO – setzt prägnante Akzente im Bad: edel, elegant und zugleich extravagant.",
     image: "/news/keucoblackselection.webp",
     imageAlt: "KEUCO BLACK SELECTION – schwarz matte Badausstattung",
+    images: [
+      "/news/keuco-1.webp",
+      "/news/keuco-2.webp",
+      "/news/keuco-3.webp",
+      "/news/keuco-4.webp",
+      "/news/keuco-5.webp",
+    ],
     content: [
       {
         heading: "Kraftvolle Akzente mit schwarz matter Badausstattung",
@@ -51,6 +59,13 @@ export const newsArticles: NewsArticle[] = [
       "Eine Kermi Duschkabine steht für sich. Das beweist Kermi mit der neuen, noblen Beschlag-Duschkabine MENA.",
     image: "/news/kermi-farbe.webp",
     imageAlt: "Kermi Duschkabine mit individueller Farbgestaltung",
+    images: [
+      "/news/kermi-farbe-1.webp",
+      "/news/kermi-farbe-2.webp",
+      "/news/kermi-farbe-3.webp",
+      "/news/kermi-farbe-4.webp",
+      "/news/kermi-farbe-5.webp",
+    ],
     content: [
       {
         heading: "Farbe im Bad – individuelles Flair mit KermiEXTRA",
@@ -78,6 +93,13 @@ export const newsArticles: NewsArticle[] = [
       "Die neue HANSASTELA ist eine trendorientierte Designarmatur, die Ästhetik mit intelligenter Wassernutzung vereint.",
     image: "/news/hansastela.webp",
     imageAlt: "HANSASTELA 2.0 Designarmatur",
+    images: [
+      "/news/hansastela-1.webp",
+      "/news/hansastela-2.webp",
+      "/news/hansastela-3.webp",
+      "/news/hansastela-4.webp",
+      "/news/hansastela-5.webp",
+    ],
     content: [
       {
         heading: "Luxuriöses Wassererlebnis bei mehr Nachhaltigkeit und Hygiene",
@@ -110,6 +132,7 @@ export const newsArticles: NewsArticle[] = [
       "Designer Michael Stein kombiniert bei VIGOUR vogue moderne Linien mit weich fließenden Formen.",
     image: "/news/vigour.webp",
     imageAlt: "VIGOUR vogue Doppelwaschtischschale",
+    images: ["/news/vigour-1.webp"],
     content: [
       {
         heading: "Haute Couture für das Bad",
@@ -134,6 +157,11 @@ export const newsArticles: NewsArticle[] = [
       "Bei einer Gas-Hybridheizung wird eine Erdgasheizung mit erneuerbaren Energien kombiniert – für mehr Effizienz und weniger Kosten.",
     image: "/news/gas-hybrid.webp",
     imageAlt: "Gas-Hybridheizung mit Solarthermie",
+    images: [
+      "/news/gas-hybrid-1.webp",
+      "/news/gas-hybrid-2.webp",
+      "/news/gas-hybrid-3.webp",
+    ],
     content: [
       {
         paragraphs: [

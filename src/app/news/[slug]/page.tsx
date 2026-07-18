@@ -77,8 +77,40 @@ export default async function NewsArticlePage({
             ))}
           </div>
 
+          {/* Image gallery */}
+          {article.images && article.images.length > 0 && (
+            <div className="mt-10 mb-12">
+              <h2 className="text-lg font-semibold mb-4 text-foreground">
+                Bildergalerie
+              </h2>
+              <div
+                className={
+                  article.images.length === 1
+                    ? "grid grid-cols-1"
+                    : article.images.length === 2
+                    ? "grid grid-cols-2 gap-3"
+                    : "grid grid-cols-2 md:grid-cols-3 gap-3"
+                }
+              >
+                {article.images.map((src, i) => (
+                  <div
+                    key={i}
+                    className="relative overflow-hidden rounded-xl aspect-[4/3] bg-muted"
+                  >
+                    <Image
+                      src={src}
+                      alt={`${article.title} – Bild ${i + 1}`}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* CTA */}
-          <div className="mt-12 p-6 md:p-8 rounded-2xl bg-muted/50 border border-border/50">
+          <div className="p-6 md:p-8 rounded-2xl bg-muted/50 border border-border/50">
             <h3 className="text-lg font-semibold mb-2">
               Haben Sie Interesse? Sprechen Sie uns an!
             </h3>
