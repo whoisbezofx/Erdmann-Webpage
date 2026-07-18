@@ -89,7 +89,7 @@ export function Footer() {
             Heizungsbau GmbH. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-background/80 transition-colors">
+            <a href="/impressum" className="hover:text-background/80 transition-colors">
               Impressum
             </a>
             <a href="#" className="hover:text-background/80 transition-colors">

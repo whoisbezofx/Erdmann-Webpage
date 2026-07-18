@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -18,67 +20,71 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const BASE_URL = "https://sanitaer-erdmann.de";
-
 const news = [
   {
+    slug: "keucoblackselection",
     icon: Sparkles,
     category: "Bad",
     title: "Schwarze Akzente im Bad",
     subtitle: "KEUCO BLACK SELECTION",
     excerpt:
       "BLACK SELECTION – die schwarz matte Badausstattung von KEUCO – setzt prägnante Akzente im Bad: edel, elegant und zugleich extravagant.",
-    href: `${BASE_URL}/news/keucoblackselection`,
+    image: "/news/keucoblackselection.webp",
     accent: "bg-zinc-500/10 text-zinc-700",
   },
   {
+    slug: "kermi-farbgestaltung",
     icon: Palette,
     category: "Bad",
     title: "Mut zur Farbe",
     subtitle: "Individuelle Farbgestaltung für Duschkabinen | Kermi",
     excerpt:
       "Eine Kermi Duschkabine steht für sich. Das beweist Kermi mit der neuen, noblen Beschlag-Duschkabine MENA.",
-    href: `${BASE_URL}/kermi-individuelle-farbgestaltung-duschkabinen`,
+    image: "/news/kermi-farbe.webp",
     accent: "bg-blue-500/10 text-blue-600",
   },
   {
+    slug: "hansastela",
     icon: Droplet,
     category: "Bad",
     title: "Die neuen Hingucker im designstarken Badezimmer",
     subtitle: "HANSASTELA 2.0",
     excerpt:
       "Die neue HANSASTELA ist eine trendorientierte Designarmatur, die Ästhetik mit intelligenter Wassernutzung vereint.",
-    href: `${BASE_URL}/news/hansastela`,
+    image: "/news/hansastela.webp",
     accent: "bg-cyan-500/10 text-cyan-600",
   },
   {
+    slug: "vigour-vogue",
     icon: Bath,
     category: "Bad",
     title: "Elegante Doppelwaschtischschale",
     subtitle: "VIGOUR vogue",
     excerpt:
       "Designer Michael Stein kombiniert bei VIGOUR vogue moderne Linien mit weich fließenden Formen.",
-    href: `${BASE_URL}/news/vigourvoguedoppelwaschtischschale`,
+    image: "/news/vigour.webp",
     accent: "bg-indigo-500/10 text-indigo-600",
   },
   {
+    slug: "gas-hybridheizung",
     icon: Flame,
     category: "Heizung",
     title: "Was ist eine Gas-Hybridheizung?",
     subtitle: "Effizient heizen mit Kombi-Systemen",
     excerpt:
       "Bei einer Gas-Hybridheizung wird eine Erdgasheizung mit erneuerbaren Energien kombiniert – für mehr Effizienz und weniger Kosten.",
-    href: `${BASE_URL}/news/gas-hybridheizung`,
+    image: "/news/gas-hybrid.webp",
     accent: "bg-orange-500/10 text-orange-600",
   },
   {
+    slug: "kermi-mena",
     icon: ShowerHead,
     category: "Bad",
     title: "Nobel duschen",
     subtitle: "Kermi MENA",
     excerpt:
       "Eine Kermi Duschkabine steht für sich. Das beweist Kermi mit der neuen, noblen Beschlag-Duschkabine MENA.",
-    href: `${BASE_URL}/news/kerminobelduschenmitmena`,
+    image: "/news/kermi-mena.webp",
     accent: "bg-emerald-500/10 text-emerald-600",
   },
 ];
@@ -103,31 +109,37 @@ export function NewsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {news.map((item) => (
-            <a
-              key={item.title}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              key={item.slug}
+              href={`/news/${item.slug}`}
               className="group block"
             >
-              <Card className="h-full border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <div
-                      className={`flex h-11 w-11 items-center justify-center rounded-xl ${item.accent}`}
-                    >
-                      <item.icon className="h-5 w-5" />
-                    </div>
-                    <Badge variant="secondary" className="text-xs">
+              <Card className="h-full border-border/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <Badge variant="secondary" className="text-xs bg-background/80 backdrop-blur-sm">
                       {item.category}
                     </Badge>
                   </div>
-                  <CardTitle className="text-lg leading-snug">
+                </div>
+                <CardHeader>
+                  <div className="flex items-center gap-2.5 mb-1">
+                    <div
+                      className={`flex h-8 w-8 items-center justify-center rounded-lg ${item.accent}`}
+                    >
+                      <item.icon className="h-4 w-4" />
+                    </div>
+                    <p className="text-xs font-medium text-primary">{item.subtitle}</p>
+                  </div>
+                  <CardTitle className="text-base leading-snug">
                     {item.title}
                   </CardTitle>
-                  <p className="text-sm font-medium text-primary">
-                    {item.subtitle}
-                  </p>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -139,20 +151,8 @@ export function NewsSection() {
                   </span>
                 </CardContent>
               </Card>
-            </a>
+            </Link>
           ))}
-        </div>
-
-        <div className="flex justify-center mt-10">
-          <a
-            href={`${BASE_URL}/aktuelles`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(buttonVariants({ variant: "outline", size: "lg" }), "text-base gap-2")}
-          >
-            Alle Neuigkeiten ansehen
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
         </div>
       </div>
     </section>
