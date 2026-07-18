@@ -1,9 +1,11 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/sections/hero";
+import { PartnersSection } from "@/components/sections/partners";
 import { ServicesSection } from "@/components/sections/services";
 import { BadplanerSection } from "@/components/sections/badplaner";
 import { PromisesSection } from "@/components/sections/promises";
+import { NewsSection } from "@/components/sections/news";
 import { ReviewsSection } from "@/components/sections/reviews";
 import { EmergencySection } from "@/components/sections/emergency";
 import { ContactSection } from "@/components/sections/contact";
@@ -14,9 +16,11 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <PartnersSection />
         <ServicesSection />
         <BadplanerSection />
         <PromisesSection />
+        <NewsSection />
         <ReviewsSection />
         <EmergencySection />
         <ContactSection />

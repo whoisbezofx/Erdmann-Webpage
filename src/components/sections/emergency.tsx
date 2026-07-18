@@ -16,11 +16,11 @@ export function EmergencySection() {
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">
-                24/7 Notdienst
+                Notdienst auf Anfrage
               </h2>
               <p className="text-muted-foreground text-base leading-relaxed">
                 Rohrbruch, Heizungsausfall oder andere Notfälle? Unser
-                Notdienst-Team ist rund um die Uhr für Sie da – schnell,
+                Notdienst-Team ist auf Anfrage für Sie da – schnell,
                 kompetent und zuverlässig.
               </p>
             </div>

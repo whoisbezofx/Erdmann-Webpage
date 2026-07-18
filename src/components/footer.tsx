@@ -67,15 +67,15 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-background/70">
               <li className="flex justify-between">
                 <span>Mo – Do</span>
-                <span>08:00 – 16:00</span>
+                <span>08:00 – 13:30, 13:30 - 16:00</span>
               </li>
               <li className="flex justify-between">
                 <span>Freitag</span>
-                <span>08:00 – 12:00</span>
+                <span>08:00 - 12:00</span>
               </li>
               <li className="flex justify-between pt-1">
                 <span className="text-primary font-medium">Notdienst</span>
-                <span className="text-primary font-medium">24/7</span>
+                <span className="text-primary font-medium">auf Anfrage</span>
               </li>
             </ul>
           </div>
@@ -89,7 +89,7 @@ export function Footer() {
             Heizungsbau GmbH. Alle Rechte vorbehalten.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-background/80 transition-colors">
+            <a href="/impressum" className="hover:text-background/80 transition-colors">
               Impressum
             </a>
             <a href="#" className="hover:text-background/80 transition-colors">
